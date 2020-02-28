@@ -1,0 +1,42 @@
+.fill {
+    flex: 1 1 auto;
+  }
+
+.navLink{
+    color: whitesmoke;
+    padding-right: 20px;
+    font-size: .8em;
+
+}
+
+.header{
+    color:whitesmoke;
+}
+
+.mat-toolbar{
+    background: transparent;
+}
+
+  /* unvisited link */
+a:link {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: whitesmoke;
+    text-decoration: underline;
+  }
+  
+  /* selected link */
+  a:active {
+    color: whitesmoke;
+    text-decoration: none;
+  }
