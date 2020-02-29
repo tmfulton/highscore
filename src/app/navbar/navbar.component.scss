@@ -25,18 +25,22 @@ a:link {
   
   /* visited link */
   a:visited {
-    color: whitesmoke;
+    // color: whitesmoke;
     text-decoration: none;
   }
   
   /* mouse over link */
   a:hover {
-    color: whitesmoke;
+    color: cornflowerblue;
     text-decoration: underline;
   }
   
   /* selected link */
   a:active {
-    color: whitesmoke;
+    // color: whitesmoke;
     text-decoration: none;
+  }
+
+  .selected{
+    color: cornflowerblue;
   }
