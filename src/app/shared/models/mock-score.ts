@@ -1,7 +1,19 @@
 import { Score } from './score.model';
 
-export const SCORES: Score[] = [
-  { id: 1, userName: 'Slay The Spire', score:99 },
-  { id: 2, userName: 'Binding Of Isaac', score:100 },
-  { id: 3, userName: 'Sonic The Hedgehog', score:1000 }
+export const SpireSCORES: Score[] = [
+  { id: 1, userName: 'Sonictmf', score:99, gameId:1 },
+  { id: 2, userName: 'daBink', score:100, gameId:1 },
+  { id: 3, userName: 'AnOldSock', score:1000, gameId:1 }
+]
+
+export const IsaacSCORES: Score[] = [
+  { id: 1, userName: 'Sonictmf', score:99, gameId:2 },
+  { id: 2, userName: 'daBink', score:100, gameId:2 },
+  { id: 3, userName: 'AnOldSock', score:1000, gameId:2 }
+]
+
+export const SonicSCORES: Score[] = [
+  { id: 1, userName: 'Sonictmf', score:99, gameId:3 },
+  { id: 2, userName: 'daBink', score:100, gameId:3 },
+  { id: 3, userName: 'AnOldSock', score:1000, gameId:3 }
 ]

@@ -31,7 +31,7 @@ a:link {
   
   /* mouse over link */
   a:hover {
-    color: cornflowerblue;
+    color: rgba(63, 25, 105, 1);
     text-decoration: underline;
   }
   
@@ -42,5 +42,5 @@ a:link {
   }
 
   .selected{
-    color: cornflowerblue;
+    color: rgba(63, 25, 105, 1);
   }
