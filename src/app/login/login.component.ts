@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,9 @@ export class LoginComponent implements OnInit {
   successMessage: string;
   registerForm = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl('')
+    password: new FormControl(''),
+    verifyPassword: new FormControl(''),
+    userName: new FormControl('')
   });
 
   constructor(private authService: AuthService) { }
@@ -45,6 +48,13 @@ export class LoginComponent implements OnInit {
       this.errorMessage = err.message;
       this.successMessage = "";
     })
+  }
+
+  checkSignUp(value){
+    if (value.password == value.verifyPassword)
+    {
+      return true;
+    }
   }
 
 }

@@ -19,7 +19,7 @@
 
   /* unvisited link */
 a:link {
-    color: whitesmoke;
+    // color: whitesmoke;
     text-decoration: none;
   }
   
@@ -31,7 +31,7 @@ a:link {
   
   /* mouse over link */
   a:hover {
-    color: rgba(63, 25, 105, 1);
+    color:#66FCF1;
     text-decoration: underline;
   }
   
@@ -42,5 +42,5 @@ a:link {
   }
 
   .selected{
-    color: rgba(63, 25, 105, 1);
+    color: #66FCF1;
   }

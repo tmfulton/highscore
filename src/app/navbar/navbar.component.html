@@ -7,5 +7,7 @@
     <a class="navLink" routerLink="/game/1" routerLinkActive="selected">Slay The Spire</a>
     <a class="navLink" routerLink="/game/2" routerLinkActive="selected">Binding Of Isaac</a>
     <a class="navLink" routerLink="/game/3" routerLinkActive="selected">Sonic</a>
-    <a routerLink="/login" class="navLink" routerLinkActive="selected">Login</a>
+    <a *ngIf="!(user$ | async)" routerLink="/login" class="navLink" routerLinkActive="selected">Login</a>
+    <a *ngIf="user$ | async" routerLink="/login" class="navLink" routerLinkActive="selected">{{(user$ | async).email}}</a>
+    <a *ngIf="user$ | async" class="navLink" (click)='logout()'>LogOut</a>
   </mat-toolbar> 
