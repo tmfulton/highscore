@@ -1,5 +1,5 @@
 <mat-toolbar>
-    <span class="header">HighScore</span>
+    <span class="header"><a class="logo" routerLink="">HighScore</a></span>
   
     <!-- This fills the remaining space of the current row -->
     <span class="fill"></span>
@@ -8,6 +8,6 @@
     <a class="navLink" routerLink="/game/2" routerLinkActive="selected">Binding Of Isaac</a>
     <a class="navLink" routerLink="/game/3" routerLinkActive="selected">Sonic</a>
     <a *ngIf="!(user$ | async)" routerLink="/login" class="navLink" routerLinkActive="selected">Login</a>
-    <a *ngIf="user$ | async" routerLink="/login" class="navLink" routerLinkActive="selected">{{(user$ | async).email}}</a>
-    <a *ngIf="user$ | async" class="navLink" (click)='logout()'>LogOut</a>
+    <a *ngIf="user$ | async" routerLink="/profile" class="navLink" routerLinkActive="selected">Profile</a>
+    <a *ngIf="user$ | async" class="navLink" (click)='logout()'>Logout</a>
   </mat-toolbar> 

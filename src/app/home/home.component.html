@@ -1,0 +1,24 @@
+
+<div fxlayout="row" class="featureDiv">
+  <div class="featureBox">
+    <ng-container *ngIf="featuredGame$ | async as game">
+      <div fxLayout="row" fxLayoutAlign="space-around center">
+        <img src="{{ game.image }}" class="gameImage" />
+        <p>{{ game.id }} : {{ game.title }}</p>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+<div fxlayout="row">
+  <div fxlayout="col">
+    <div class="box">
+      info 1
+    </div>
+  </div>
+  <div fxlayout="col">
+    <div class="box">
+      info 2
+    </div>
+  </div>
+</div>

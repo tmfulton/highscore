@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ValueConverter } from '@angular/compiler/src/render3/view/template';
+import { MatSnackBar } from '@angular/material/snack-bar'
 
 @Component({
   selector: 'app-login',
@@ -19,7 +20,7 @@ export class LoginComponent implements OnInit {
     userName: new FormControl('')
   });
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +30,11 @@ export class LoginComponent implements OnInit {
     .then(res => {
       console.log(res);
       this.errorMessage = "";
-      this.successMessage = "Your account has been created";
+
+      let snackBarRef = this.snackBar.open("Your account has been created", '', {
+        duration: 3000,
+        panelClass: ['green-snackBar']
+      });
     }, err => {
       console.log(err);
       this.errorMessage = err.message;
@@ -42,7 +47,10 @@ export class LoginComponent implements OnInit {
     .then(res => {
       console.log(res);
       this.errorMessage = "";
-      this.successMessage = "You have been logged in";
+      let snackBarRef = this.snackBar.open('Succesfully logged In', '', {
+        duration: 3000,
+        panelClass: ['green-snackBar']
+      });
     }, err => {
       console.log(err);
       this.errorMessage = err.message;
